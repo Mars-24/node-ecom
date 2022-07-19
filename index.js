@@ -16,11 +16,18 @@ mongoose.connect(process.env.MONGO_URL)
     }).catch(err => { console.log(`Erreur : ${err}`); });
 
 app.use(express.json());
+app.use(express.static('public'))
+app.set('view engine', 'ejs');
+
 app.use('/api/users', userRoute);
 app.use('/api/auth', authRoute);
 app.use('/api/products', productRoute);
 app.use('/api/carts', cartRoute);
 app.use('/api/orders', orderRoute);
+app.use('/', (req, res, next) => {
+    res.render('index');
+});
+
 
 app.listen(3000, () => {
     console.log('Backend server');
