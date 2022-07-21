@@ -151,16 +151,17 @@ nav .onglets input {
     font-size: 1.25rem;
 }
 
-.main {
+.category {
 
-    margin-top: -30px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #f8f9fa;
 }
 
-.main h1 {
+.category h1 {
     font-weight: bolder;
     font-size: 30px;
 }
@@ -178,4 +179,92 @@ nav .onglets input {
 .cards {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1480px;
+
+}
+
+.cards .card {
+    margin: auto 10px;
+    cursor: pointer;
+}
+
+.cards .card img {
+    width: 350px;
+}
+
+.products {
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products h1 {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.promotion {
+    display: flex;
+    background: #f8f9fa;
+    margin: 2rem 0;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 700px;
+}
+
+.promotion .flex>img {
+    width: 47%;
+}
+
+.promotion .flex>div {
+    width: 40%;
+}
+
+.promotion .flex>div h2 {
+    font-size: 2.5rem;
+    color: #3c7b8d;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+p.large-paragraph {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+footer {
+    margin-top: 100px;
+    background-color: #000;
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .social-media {
+    display: flex;
+}
+
+footer .social-media p {
+    margin-right: 15px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    padding: 5px;
+    text-align: center;
+    width: 20px;
+    cursor: pointer;
 }
