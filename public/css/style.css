@@ -52,6 +52,18 @@ nav .onglets input {
     background-color: #f2f2f2;
 }
 
+nav button {
+    margin: 10px 20px;
+    width: 90px;
+    height: 40px;
+    display: center;
+    justify-content: center;
+}
+
+nav button a i {
+    font-size: 30px;
+}
+
 /*fin Bar de navigation*/
 
 .hero {
@@ -222,7 +234,6 @@ nav .onglets input {
     max-width: 1480px;
     margin: 0 auto;
     padding: 0 20px;
-    height: 700px;
 }
 
 .promotion .flex>img {
@@ -267,4 +278,35 @@ footer .social-media p {
     text-align: center;
     width: 20px;
     cursor: pointer;
+}
+
+/*inscription*/
+.form-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+
+.form-control input {
+    padding: 8px;
+    border: solid 1px #ccc;
+}
+
+.form-control textarea {
+    padding: 8px;
+    border-color: #ccc;
+    height: 4rem;
+}
+
+.form-control input[type='button'] {
+    background-color: #1c1cc0;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+.sign_in h2 {
+    justify-content: center;
+    text-align: center;
 }

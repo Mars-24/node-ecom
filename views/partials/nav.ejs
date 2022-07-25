@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/slick/slick.min.js"></script>
+
+    <title>Ecommerce site</title>
+</head>
+
+<body>
+    <nav>
+        <h1><a href="/">Ecommerce</a></h1>
+        <div class="onglets">
+            <p class="link">Nouveautés</p>
+            <p class="link">Hommes</p>
+            <p class="link">Femmes</p>
+            <p class="link">Enfants</p>
+            <p class="link">Cadeaux</p>
+
+            <form action="">
+                <input type="search" placeholder="Search">
+            </form>
+            <% if (username.length>0) { %>
+                <h2>
+                    <%= username %>
+                </h2>
+                <% } else { %>
+
+                    <button><a href="/sign">
+                            <i class="fas fa-user-circle"></i>
+                        </a></button>
+                    <%}%>
+                        <p> <i class="fas fa-shopping-cart"></i></p>
+        </div>
+    </nav>

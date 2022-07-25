@@ -1,37 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="/js/slick/slick.min.js"></script>
+<!-- navbar-->
 
-    <title>Ecommerce site</title>
-</head>
-
-<body>
-    <!-- navbar-->
-
-    <nav>
-        <h1>Ecommerce</h1>
-        <div class="onglets">
-            <p class="link">Nouveautés</p>
-            <p class="link">Hommes</p>
-            <p class="link">Femmes</p>
-            <p class="link">Enfants</p>
-            <p class="link">Cadeaux</p>
-            <form action="">
-                <input type="search" placeholder="Search">
-            </form>
-            <p> <i class="far fa-heart"></i></p>
-            <p> <i class="fas fa-shopping-cart"></i></p>
-
-        </div>
-    </nav>
+<%- include ('./partials/nav.ejs') %>
     <!-- end navbar-->
     <!-- header-->
     <header>
@@ -249,7 +221,20 @@
             <p><i class="fab fa-linkedin-in"></i></p>
         </div>
     </footer>
-</body>
+    <script>
+        $(document).ready(function () {
+            var a = $("nav").offset().top;
+
+            $(document).scroll(function () {
+                if ($(this).scrollTop() > a) {
+                    $('nav').css({ "background-color": "#e4e5f2" });
+                } else {
+                    $('nav').css({ "background-color": "transparent" });
+                }
+            });
+        });
+    </script>
+    </body>
 
 </html>
 </body>

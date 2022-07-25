@@ -19,16 +19,22 @@ mongoose.connect(process.env.MONGO_URL)
 app.use(express.json());
 app.use(express.static('public'))
 app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
+
+
+app.get('/', (req, res, next) => {
+    const username = '';
+    res.render('index', { 'username': username });
+
+});
 
 app.use('/api/users', userRoute);
-app.use('/api/auth', authRoute);
+app.use(authRoute);
 app.use('/api/products', productRoute);
 app.use('/api/carts', cartRoute);
 app.use('/api/orders', orderRoute);
 app.use('/api/category', categoryRoute);
-app.use('/', (req, res, next) => {
-    res.render('index');
-});
+
 
 
 app.listen(3000, () => {

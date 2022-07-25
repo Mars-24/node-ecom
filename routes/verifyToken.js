@@ -1,3 +1,4 @@
+const req = require('express/lib/request');
 const jwt = require('jsonwebtoken');
 
 
@@ -34,5 +35,12 @@ const verifyTokenAndAdmin = (req, res, next) => {
         }
     })
 };
+
+const checkUser = (req, res, next) => {
+    const token = req.cookies.jwt;
+    if (token) {
+
+    }
+}
 
 module.exports = { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin };

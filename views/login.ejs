@@ -1,0 +1,25 @@
+<%- include('./partials/nav') %>
+    <section class="sign_in">
+        <h2>Login</h2>
+        <div class="container">
+            <form action="/api/auth/login" class="form" method="POST">
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                </div>
+
+                <div class="form-control">
+                    <label for="titre">Password</label>
+                    <input type="text" id="Password" name="password">
+
+                </div>
+                <div class="form-control">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+        <p><a href="/sign">Sign UP</a></p>
+    </section>
+    </body>
+
+    </html>
