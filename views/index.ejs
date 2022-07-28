@@ -212,29 +212,21 @@
             </div>
         </div>
     </section>
-    <footer>
-        <p>&copy; Contactez-nous au 00 00 00 00</p>
-        <div class="social-media">
-            <p><i class="fab fa-facebook-f"></i></p>
-            <p><i class="fab fa-twitter"></i></p>
-            <p><i class="fab fa-instagram"></i></p>
-            <p><i class="fab fa-linkedin-in"></i></p>
-        </div>
-    </footer>
-    <script>
-        $(document).ready(function () {
-            var a = $("nav").offset().top;
+    <%- include('./partials/footer.ejs') %>
+        <script>
+            $(document).ready(function () {
+                var a = $("nav").offset().top;
 
-            $(document).scroll(function () {
-                if ($(this).scrollTop() > a) {
-                    $('nav').css({ "background-color": "#e4e5f2" });
-                } else {
-                    $('nav').css({ "background-color": "transparent" });
-                }
+                $(document).scroll(function () {
+                    if ($(this).scrollTop() > a) {
+                        $('nav').css({ "background-color": "#e4e5f2" });
+                    } else {
+                        $('nav').css({ "background-color": "transparent" });
+                    }
+                });
             });
-        });
-    </script>
-    </body>
+        </script>
+        </body>
 
 </html>
 </body>
