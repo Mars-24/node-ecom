@@ -10,7 +10,8 @@
                             <i class="fa-regular fa-envelope icon"></i>
                         </div>
                         <div class="input-field">
-                            <input type="text" id="Password" name="password" required placeholder="Enter your password">
+                            <input type="password" class="password" id="Password" name="password" required
+                                placeholder="Enter your password">
                             <i class="fa-regular fa-eye-slash showHidePw"></i>
 
                         </div>
@@ -21,7 +22,59 @@
                             </div>
                             <a href="#" class="text">Forgot password</a>
                         </div>
+                        <div class="input-field button">
+                            <input type="button" value="Login Now">
+                        </div>
                     </form>
+                    <div class="login-signup">
+                        <span class="text">Not a member?
+                            <a href="#" class="text signup-text">SignUp Now</a>
+                        </span>
+                    </div>
+                </div>
+                <!--Registration form-->
+
+                <div class="form login">
+                    <span class="title">Registration</span>
+                    <form action="/api/auth/login" class="form" method="POST">
+                        <div class="input-field">
+                            <input type="text" id="username" name="username" required placeholder="Enter your Username">
+                            <i class="far fa-user"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            <i class="fa-regular fa-envelope icon"></i>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="password" id="Password" name="password" required
+                                placeholder="Enter your password">
+                            <i class="far fa-lock"></i>
+                            <i class="fa-regular fa-eye-slash showHidePw"></i>
+
+                        </div>
+                        <div class="input-field">
+                            <input type="password" class="password" id="Password" name="password" required
+                                placeholder="Enter your password">
+                            <i class="far fa-lock"></i>
+                            <i class="fa-regular fa-eye-slash showHidePw"></i>
+
+                        </div>
+                        <div class="checkbox-text">
+                            <div class="checkbox-content">
+                                <input type="checkbox" id="logCheck">
+                                <label for="logCheck" class="text">Remenber me</label>
+                            </div>
+                            <a href="#" class="text">Forgot password</a>
+                        </div>
+                        <div class="input-field button">
+                            <input type="button" value="Login Now">
+                        </div>
+                    </form>
+                    <div class="login-signup">
+                        <span class="text">Not a member?
+                            <a href="#" class="text signup-text">SignUp Now</a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,6 +92,30 @@
                         $('nav').css({ "background-color": "transparent" });
                     }
                 });
+            });
+
+            const container = document.querySelector('.container'),
+                pwShowHide = document.querySelectorAll('.showHidePw'),
+                pwFields = document.querySelectorAll('.password');
+
+            pwShowHide.forEach(eyeIcon => {
+                eyeIcon.addEventListener('click', () => {
+                    pwFields.forEach(pwField => {
+                        if (pwField.type === "password") {
+                            pwField.type = "text";
+
+                            pwShowHide.forEach(icon => {
+                                icon.classList.replace("fa-eye-slash", "fa-eye");
+                            })
+                        } else {
+                            pwField.type = "password";
+                            pwShowHide.forEach(icon => {
+                                icon.classList.replace("fa-eye", "fa-eye-slash");
+                            })
+                        }
+                    })
+                })
+
             });
         </script>
         </body>
